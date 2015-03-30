@@ -3,7 +3,7 @@
     "description": "Ich versuche mich mal an nem Jump'n'Run mit Crafty.js",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/preealpha/JumpRun.git"
     },
     "author": {
         "name": "Martin Fünning (Privat)",
