@@ -1,6 +1,12 @@
 Jump'n'Run
 ==========
 
+Doc Resources
+-------------
+
+Tutorial zu Crafty: http://cykod.github.io/Presentations/HTML5/Crafty/
+Crafty.js API Doc: http://craftyjs.com/api/
+
 Anleitung zum Kompilieren
 -------------------------
 
