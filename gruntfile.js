@@ -22,6 +22,7 @@ module.exports = function(grunt) {
             },
             build: {
                 src: [
+                    'js/vendor/crafty.js',
                     'js/game.js'
                 ],
                 dest: 'build/jumpRun/js/jumpRun.min.js'
@@ -43,7 +44,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     src: ['assets/*'],
-                    dest: 'build/mvKarte/',
+                    dest: 'build/jumpRun/',
                     filter: 'isFile'
                 }]
             }
