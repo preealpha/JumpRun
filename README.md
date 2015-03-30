@@ -10,6 +10,9 @@ Crafty.js API Doc: http://craftyjs.com/api/
 Mapeditor: http://www.mapeditor.org/download.html
 Crafty Modul zum Laden: https://github.com/Kibo/TiledMapBuilder
 
+GameDev Tutorial: http://codeincomplete.com/posts/2013/5/27/tiny_platformer/
+Free Game Resources zum testen: http://www.gameartguppy.com/shop/green-platformer-world-set/
+
 Anleitung zum Kompilieren
 -------------------------
 
