@@ -7,6 +7,9 @@ Doc Resources
 Tutorial zu Crafty: http://cykod.github.io/Presentations/HTML5/Crafty/
 Crafty.js API Doc: http://craftyjs.com/api/
 
+Mapeditor: http://www.mapeditor.org/download.html
+Crafty Modul zum Laden: https://github.com/Kibo/TiledMapBuilder
+
 Anleitung zum Kompilieren
 -------------------------
 
