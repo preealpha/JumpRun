@@ -54,7 +54,12 @@ game.prototype.options.assetsObj = {
         objectMountain2: "assets/Objects/object_mountain2.png",
         objectSpikes: "assets/Objects/object_spikes.png",
         objectTree: "assets/Objects/object_tree.png",
-        backgroundMain: "assets/Background/main.png"
+        backgroundMain: "assets/Background/main.png",
+        backgroundGame: "assets/Background/game.png",
+        teststageSprite: "assets/sprite.png"
     }
+};
 
+game.prototype.stages = {
+    teststage: 'stages/teststage.json'
 };

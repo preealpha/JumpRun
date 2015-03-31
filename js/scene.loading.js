@@ -13,7 +13,7 @@ game.prototype.scene.loading = Crafty.scene("loading", function(game) {
     game.tempElements.loadingElement = Crafty.e("2D, DOM, Text").attr({w: 640, h: 20, x: 0, y: 120})
         .text("Loading "+game.tempElements.loadingPercent+"%")
         .css({"text-align": "center"}).unselectable();
-    console.log(game.tempElements);
+
     Crafty.load(
         game.options.assetsObj,
         _.bind(function() {

@@ -25,11 +25,14 @@ module.exports = function(grunt) {
                     'js/vendor/underscore.js',
                     'js/vendor/jquery-2.1.3.js',
                     'js/vendor/crafty.js',
+                    'js/vendor/create_mocks_module.js',
+                    'js/vendor/tiledmapbuilder.js',
                     'js/game.js',
                     'js/settings.js',
                     'js/scene.init.js',
                     'js/scene.loading.js',
-                    'js/scene.main.js'
+                    'js/scene.main.js',
+                    'js/scene.stage.js'
                 ],
                 dest: 'build/jumpRun/js/jumpRun.min.js'
             }
