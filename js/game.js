@@ -7,16 +7,19 @@
 var game = function() {
     // Initialize Crafty
     Crafty.init(
-        640, 480,
+        800, 600,
         document.getElementById('game')
     );
 
     Crafty.canvas.init(); // Create a Canvas Element
 
-    Crafty.scene("loading" , this);
+    Crafty.scene("init" , this);
 };
+
+game.prototype = {};
 game.prototype.scene = {};
 game.prototype.options = {};
+game.prototype.clearTemp = function() { this.tempElements = {}; };
 
 $(document).ready(function() {
     new game();

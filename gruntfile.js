@@ -22,11 +22,14 @@ module.exports = function(grunt) {
             },
             build: {
                 src: [
+                    'js/vendor/underscore.js',
                     'js/vendor/jquery-2.1.3.js',
                     'js/vendor/crafty.js',
+                    'js/game.js',
                     'js/settings.js',
-                    'js/loading.js',
-                    'js/game.js'
+                    'js/scene.init.js',
+                    'js/scene.loading.js',
+                    'js/scene.main.js'
                 ],
                 dest: 'build/jumpRun/js/jumpRun.min.js'
             }
