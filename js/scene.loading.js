@@ -17,8 +17,13 @@ game.prototype.scene.loading = Crafty.scene("loading", function(game) {
     Crafty.load(
         game.options.assetsObj,
         _.bind(function() {
-            // Put in a fake timeout so we can see this in action
-            // DONT do this in a real game please
+            Crafty.sprite(64,64,this.options.assetsObj.images.heroSprite, {
+                HeroStandRight:[0,0,1,2],
+                HeroStandLeft:[0,2,1,2],
+                HeroJumpRight:[0,2,1,2],
+                HeroJumpLeft:[0,2,1,2]
+            });
+
             Crafty.scene("main", this); // Play the main scene
 
         }, game),

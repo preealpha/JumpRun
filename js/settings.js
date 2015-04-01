@@ -56,7 +56,8 @@ game.prototype.options.assetsObj = {
         objectTree: "assets/Objects/object_tree.png",
         backgroundMain: "assets/Background/main.png",
         backgroundGame: "assets/Background/game.png",
-        teststageSprite: "assets/sprite.png"
+        teststageSprite: "assets/sprite.png",
+        heroSprite: "assets/hero.png"
     }
 };
 
