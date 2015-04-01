@@ -7,7 +7,7 @@ game.prototype.scene.main = Crafty.scene("main", function(game) {
     Crafty.background('#FFFFFF url('+game.options.assetsObj.images.backgroundMain+') no-repeat center center');
     window.setTimeout(_.bind(function(game) {
         Crafty.scene("stage", {game: game, stage: game.stages.teststage});
-    }, this, game), 3000);
+    }, this, game), 500);
 
 
 
