@@ -50,12 +50,28 @@ module.exports = function(grunt) {
         },
         copy: {
             main: {
-                files: [{
-                    expand: true,
-                    src: ['assets/*'],
-                    dest: 'build/jumpRun/',
-                    filter: 'isFile'
-                }]
+                files: [
+                    {
+                        expand: true,
+                        src: [
+                            'assets/*',
+                            'assets/Background/*',
+                            'assets/Blocks/*',
+                            'assets/Hero/*',
+                            'assets/Objects/*'
+                        ],
+                        dest: 'build/jumpRun/',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        src: [
+                            'stages/*'
+                        ],
+                        dest: 'build/jumpRun/',
+                        filter: 'isFile'
+                    }
+                ]
             }
         }
     });
