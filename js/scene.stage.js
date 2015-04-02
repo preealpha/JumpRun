@@ -7,14 +7,22 @@ game.prototype.scene.main = Crafty.scene("stage", function(data) {
     var game = data.game;
     Crafty.background('#FFFFFF url('+game.options.assetsObj.images.backgroundGame+') no-repeat center center');
     $.ajax(data.stage, { complete: function(data) {
-        Crafty.e("2D, DOM, TiledMapBuilder").setMapDataSource(data.responseJSON).createWorld( function( tiledmap ){
+        for (var i = 0; i < data.responseJSON.tilesets.length; i++) {
+            data.responseJSON.tilesets[i].image = 'stages/'+data.responseJSON.tilesets[i].image;
+        }
+        Crafty.e("2D, Canvas, TiledMapBuilder").setMapDataSource(data.responseJSON).createWorld( function( tiledmap ){
 
             //Obstacles
             for (var obstacle = 0; obstacle < tiledmap.getEntitiesInLayer('Level').length; obstacle++){
                 tiledmap.getEntitiesInLayer('Level')[obstacle]
                     .addComponent("Collision")
                     .collision();
+
             }
+
+            Crafty('Tile12').each(function() {
+                console.log(this);
+            });
 
             Crafty.c("Camera",{
                 init: function() {  },
@@ -56,6 +64,7 @@ game.prototype.scene.main = Crafty.scene("stage", function(data) {
                 .bind("EnterFrame", function(e) {
                     if (!player.y_before) {
                         player.y_before = player.y
+                        player.x_before = player.x
                     } else {
                         if (player.y < player.y_before) {
                             player.jump = true;
@@ -66,14 +75,23 @@ game.prototype.scene.main = Crafty.scene("stage", function(data) {
                             }
                         } else {
                             player.jump = false;
-                            if ((!player.isPlaying("HeroRightRunning")) && (!player.isPlaying("HeroLeftRunning"))) {
-                                switch(player.direction) {
-                                    case 'right': default: player.sprite(0, 0, 1, 2); break;
-                                    case 'left': player.sprite(0, 2, 1, 2); break;
+                            if (player.x_before < player.x) {
+                                if (!player.isPlaying("HeroRightRunning")) player.animate("HeroRightRunning", -1);
+                                player.direction = 'right';
+                            } else if (player.x_before > player.x) {
+                                if (!player.isPlaying("HeroLeftRunning")) player.animate("HeroLeftRunning", -1);
+                                player.direction = 'left';
+                            } else {
+                                if ((!player.isPlaying("HeroRightRunning")) && (!player.isPlaying("HeroLeftRunning"))) {
+                                    switch(player.direction) {
+                                        case 'right': default: player.sprite(0, 0, 1, 2); break;
+                                        case 'left': player.sprite(0, 2, 1, 2); break;
+                                    }
                                 }
                             }
                         }
                         player.y_before = player.y
+                        player.x_before = player.x
                     }
 
                 })

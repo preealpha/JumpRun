@@ -66,6 +66,29 @@
             },
          "spacing":0,
          "tileheight":64,
+         "tileproperties":
+            {
+             "0":
+                {
+                 "obstacle":"full"
+                },
+             "1":
+                {
+                 "obstacle":"full"
+                },
+             "11":
+                {
+                 "points":"1"
+                },
+             "2":
+                {
+                 "obstacle":"full"
+                },
+             "3":
+                {
+                 "obstacle":"plattform"
+                }
+            },
          "tilewidth":64
         }],
  "tilewidth":64,
